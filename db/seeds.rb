@@ -1,21 +1,77 @@
-# Create dummy data for users
-User.create(name: 'John Doe', email: 'john@example.com', password: 'password', confirmed_at: Time.now)
-User.create(name: 'Jane Smith', email: 'jane@example.com', password: 'password', confirmed_at: Time.now)
+# Dummy data for the "users" table
+User.create(
+  name: "John Doe",
+  email: "john@example.com",
+  encrypted_password: "password123",
+  created_at: DateTime.now,
+  updated_at: DateTime.now
+)
 
-# Create dummy data for foods
-Food.create(name: 'Apple', measurement_unit: 'piece', price: 1.5, quantity: 10, user_id: 1)
-Food.create(name: 'Banana', measurement_unit: 'piece', price: 0.75, quantity: 20, user_id: 2)
-Food.create(name: 'Chicken', measurement_unit: 'lb', price: 5.99, quantity: 5, user_id: 1)
-Food.create(name: 'Broccoli', measurement_unit: 'lb', price: 2.25, quantity: 8, user_id: 2)
+User.create(
+  name: "Jane Smith",
+  email: "jane@example.com",
+  encrypted_password: "secret456",
+  created_at: DateTime.now,
+  updated_at: DateTime.now
+)
 
-# Create dummy data for recipes
-Recipe.create(name: 'Apple Pie', preparation_time: 30, cooking_time: 45, description: 'Delicious apple pie recipe', public: true, user_id: 1)
-Recipe.create(name: 'Banana Smoothie', preparation_time: 10, cooking_time: 0, description: 'Healthy banana smoothie', public: true, user_id: 2)
-Recipe.create(name: 'Grilled Chicken', preparation_time: 15, cooking_time: 20, description: 'Tasty grilled chicken recipe', public: true, user_id: 1)
-Recipe.create(name: 'Broccoli Stir-Fry', preparation_time: 20, cooking_time: 15, description: 'Quick and easy broccoli stir-fry', public: true, user_id: 2)
+# Dummy data for the "foods" table
+Food.create(
+  name: "Apples",
+  measurement_unit: "pieces",
+  price: 1.99,
+  quantity: 10.5,
+  user_id: 1, # User John Doe
+  created_at: DateTime.now,
+  updated_at: DateTime.now
+)
 
-# Create dummy data for recipe_foods associations
-RecipeFood.create(quantity: 4, recipe_id: 1, food_id: 1)  # Apple Pie requires 4 Apples
-RecipeFood.create(quantity: 2, recipe_id: 2, food_id: 2)  # Banana Smoothie requires 2 Bananas
-RecipeFood.create(quantity: 2, recipe_id: 3, food_id: 3)  # Grilled Chicken requires 2 lb of Chicken
-RecipeFood.create(quantity: 3, recipe_id: 4, food_id: 4)  # Broccoli Stir-Fry requires 3 lb of Broccoli
+Food.create(
+  name: "Chicken",
+  measurement_unit: "lbs",
+  price: 5.99,
+  quantity: 2.5,
+  user_id: 2, # User Jane Smith
+  created_at: DateTime.now,
+  updated_at: DateTime.now
+)
+
+# Dummy data for the "recipes" table
+Recipe.create(
+  name: "Apple Pie",
+  preparation_time: 30,
+  cooking_time: 60,
+  description: "Delicious homemade apple pie recipe.",
+  public: true,
+  user_id: 1, # User John Doe
+  created_at: DateTime.now,
+  updated_at: DateTime.now
+)
+
+Recipe.create(
+  name: "Chicken Stir-Fry",
+  preparation_time: 20,
+  cooking_time: 15,
+  description: "Quick and easy chicken stir-fry recipe.",
+  public: true,
+  user_id: 2, # User Jane Smith
+  created_at: DateTime.now,
+  updated_at: DateTime.now
+)
+
+# Dummy data for the "recipe_foods" table
+RecipeFood.create(
+  quantity: 3.0,
+  recipe_id: 1, # Apple Pie
+  food_id: 1,   # Apples
+  created_at: DateTime.now,
+  updated_at: DateTime.now
+)
+
+RecipeFood.create(
+  quantity: 1.5,
+  recipe_id: 2, # Chicken Stir-Fry
+  food_id: 2,   # Chicken
+  created_at: DateTime.now,
+  updated_at: DateTime.now
+)
