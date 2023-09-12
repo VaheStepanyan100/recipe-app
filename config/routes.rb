@@ -6,8 +6,6 @@ Rails.application.routes.draw do
     root 'recipes#index', as: :authenticated_root
   end
 
-  root to: 'welcome#index'
-
   resources :recipes do
     member do
       delete :destroy
