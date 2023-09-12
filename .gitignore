@@ -36,3 +36,6 @@
 
 # Ignore the database config.
 /config/database.yml
+
+# Ignore node_modules
+/node_modules 
