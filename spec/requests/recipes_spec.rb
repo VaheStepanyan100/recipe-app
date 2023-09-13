@@ -64,4 +64,15 @@ RSpec.describe RecipesController, type: :controller do
       expect(assigns(:recipe)).to eq(recipe)
     end
   end
+
+  describe 'DELETE #remove_food' do
+    let(:food) { Food.create(name: 'Test Food', user:, price: 5.0, quantity: 2.0) }
+
+    it 'removes food from the recipe' do
+      recipe.foods << food
+      expect do
+        delete :remove_food, params: { id: recipe.id, food_id: food.id }
+      end.to change(recipe.foods, :count).by(-1)
+    end
+  end
 end
