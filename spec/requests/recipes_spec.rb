@@ -106,5 +106,25 @@ RSpec.describe RecipesController, type: :controller do
     end
   end
 
-  
+  describe 'GET #generate_shopping_list' do
+    let(:other_user) { User.create(name: 'Other User', email: 'other@example.com', password: 'password') }
+    let(:food) { Food.create(name: 'Test Food', user: other_user, price: 5, quantity: 2) }
+
+    before { recipe.foods << food }
+
+    it 'returns a successful response' do
+      get :generate_shopping_list, params: { id: recipe.id }
+      expect(response).to be_successful
+    end
+
+    it 'assigns required foods to @required_foods' do
+      get :generate_shopping_list, params: { id: recipe.id }
+      expect(assigns(:required_foods)).to eq([food])
+    end
+
+    it 'calculates the total value correctly' do
+      get :generate_shopping_list, params: { id: recipe.id }
+      expect(assigns(:total_value)).to eq(10)
+    end
+  end
 end
