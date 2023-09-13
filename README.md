@@ -5,14 +5,14 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 About ](#-about-)
+- [📖 Recipe-App ](#-recipe-app-)
   - [🛠 Built With ](#-built-with-)
     - [Key Features ](#key-features-)
   - [💻 Getting Started ](#-getting-started-)
-    - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Usage](#usage)
     - [Run tests](#run-tests)
+    - [Usage](#usage-1)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -111,6 +111,11 @@ rspec spec
 
 - GitHub: [@iamsjunaid](https://github.com/iamsjunaid)
 - LinkedIn: [@junaidahmedsyed](https://www.linkedin.com/in/junaidahmedsyed/)
+
+👤 **Vahe Stepanyan**
+
+- GitHub: [@iamsjunaid](https://github.com/VaheStepanyan100)
+- LinkedIn: [@junaidahmedsyed](https://www.linkedin.com/in/vahestepanyan/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
