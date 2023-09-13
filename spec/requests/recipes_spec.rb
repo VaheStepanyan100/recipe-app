@@ -29,4 +29,15 @@ RSpec.describe RecipesController, type: :controller do
       expect(assigns(:recipe)).to be_a_new(Recipe)
     end
   end
+
+  describe 'POST #create' do
+    let(:valid_params) { { recipe: { name: 'New Recipe', user_id: user.id } } }
+
+    it 'creates a new recipe with valid parameters' do
+      expect do
+        post :create, params: valid_params
+      end.to change(Recipe, :count).by(1)
+      expect(response).to redirect_to(recipe_path(Recipe.last))
+    end
+  end
 end
