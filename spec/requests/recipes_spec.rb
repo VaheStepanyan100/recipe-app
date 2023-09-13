@@ -75,4 +75,17 @@ RSpec.describe RecipesController, type: :controller do
       end.to change(recipe.foods, :count).by(-1)
     end
   end
+
+  describe 'GET #public_recipes' do
+    it 'returns a successful response' do
+      get :public_recipes
+      expect(response).to be_successful
+    end
+
+    it 'assigns public recipes to @public_recipes' do
+      public_recipe = Recipe.create(name: 'Public Recipe', user:, public: true)
+      get :public_recipes
+      expect(assigns(:public_recipes)).to eq([public_recipe])
+    end
+  end
 end
