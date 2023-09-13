@@ -88,4 +88,13 @@ RSpec.describe RecipesController, type: :controller do
       expect(assigns(:public_recipes)).to eq([public_recipe])
     end
   end
+
+  describe 'DELETE #destroy' do
+    it 'deletes the recipe' do
+      recipe
+      expect do
+        delete :destroy, params: { id: recipe.id }
+      end.to change(Recipe, :count).by(-1)
+    end
+  end
 end
