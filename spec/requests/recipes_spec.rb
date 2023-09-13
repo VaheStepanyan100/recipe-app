@@ -17,4 +17,16 @@ RSpec.describe RecipesController, type: :controller do
       expect(assigns(:recipes)).to eq(user.recipes)
     end
   end
+
+  describe 'GET #new' do
+    it 'returns a successful response' do
+      get :new
+      expect(response).to be_successful
+    end
+
+    it 'assigns a new recipe to @recipe' do
+      get :new
+      expect(assigns(:recipe)).to be_a_new(Recipe)
+    end
+  end
 end
