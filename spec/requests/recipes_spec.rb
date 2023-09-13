@@ -97,4 +97,14 @@ RSpec.describe RecipesController, type: :controller do
       end.to change(Recipe, :count).by(-1)
     end
   end
+
+  describe 'PATCH #toggle_recipe_public' do
+    it 'toggles the recipe\'s public status' do
+      expect do
+        patch :toggle_recipe_public, params: { id: recipe.id }
+      end.to change { recipe.reload.public }.from(false).to(true)
+    end
+  end
+
+  
 end
