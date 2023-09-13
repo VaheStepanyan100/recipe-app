@@ -52,4 +52,16 @@ RSpec.describe RecipesController, type: :controller do
       expect(assigns(:recipe)).to eq(recipe)
     end
   end
+
+  describe 'GET #add_ingredient' do
+    it 'returns a successful response' do
+      get :add_ingredient, params: { id: recipe.id }
+      expect(response).to be_successful
+    end
+
+    it 'assigns the requested recipe to @recipe' do
+      get :add_ingredient, params: { id: recipe.id }
+      expect(assigns(:recipe)).to eq(recipe)
+    end
+  end
 end
