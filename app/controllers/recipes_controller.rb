@@ -1,12 +1,12 @@
 class RecipesController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
     @recipes = current_user.recipes.all
   end
 
   def destroy
-    puts "Destroy action executed."
+    puts 'Destroy action executed.'
     @recipe = Recipe.find(params[:id])
     if @recipe.user == current_user
       @recipe.destroy
