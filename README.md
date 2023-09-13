@@ -154,6 +154,6 @@ Thanks to all Microverse community
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/VaheStepanyan100/recipe-app/blob/Recipe-tests/LICENSE) licensed.
+This project is [MIT](https://github.com/VaheStepanyan100/recipe-app/blob/dev/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
