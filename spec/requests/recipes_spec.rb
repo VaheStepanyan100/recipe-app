@@ -40,4 +40,16 @@ RSpec.describe RecipesController, type: :controller do
       expect(response).to redirect_to(recipe_path(Recipe.last))
     end
   end
+
+  describe 'GET #show' do
+    it 'returns a successful response' do
+      get :show, params: { id: recipe.id }
+      expect(response).to be_successful
+    end
+
+    it 'assigns the requested recipe to @recipe' do
+      get :show, params: { id: recipe.id }
+      expect(assigns(:recipe)).to eq(recipe)
+    end
+  end
 end
