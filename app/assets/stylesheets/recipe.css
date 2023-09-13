@@ -1,4 +1,4 @@
-.recipes-container li{
+.recipes-container li {
   list-style: none;
   margin-bottom: 20px;
   padding: 20px;
@@ -10,7 +10,7 @@
   justify-content: space-between;
 }
 
-.recipes-container a:nth-child(2){
+.recipes-container a:nth-child(2) {
   text-decoration: none;
   color: #000;
 }
