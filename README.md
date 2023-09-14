@@ -114,8 +114,8 @@ rspec spec
 
 👤 **Vahe Stepanyan**
 
-- GitHub: [@iamsjunaid](https://github.com/VaheStepanyan100)
-- LinkedIn: [@junaidahmedsyed](https://www.linkedin.com/in/vahestepanyan/)
+- GitHub: [@githubhandle](https://github.com/VaheStepanyan100)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/vahestepanyan/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
