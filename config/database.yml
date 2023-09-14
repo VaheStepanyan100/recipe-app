@@ -16,6 +16,7 @@ test:
 
 production:
   <<: *default
+  adapter: postgresql
   url: <%= ENV['DATABASE_URL'] %>
   database: recipe_app_production
   username: postgres
