@@ -8,6 +8,7 @@
 - [📖 Recipe-App ](#-recipe-app-)
   - [🛠 Built With ](#-built-with-)
     - [Key Features ](#key-features-)
+  - [🚀 Live Demo](#live-demo)
   - [💻 Getting Started ](#-getting-started-)
     - [Setup](#setup)
     - [Usage](#usage)
@@ -41,7 +42,13 @@
 - A general shopping list view
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- LIVE DEMO -->
 
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://nations-facts.onrender.com)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
